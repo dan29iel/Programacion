@@ -55,17 +55,17 @@ class RegistreAlumnes {         //Declararem les variables d'instància de la cl
     private HashMap<Integer, Alumne> alumnes;
     private Scanner scanner;
 
-public RegistreAlumnes() {           //Constructor que inicialitza el HashMap  i l'escaner.
+    public RegistreAlumnes() {           //Constructor que inicialitza el HashMap  i l'escaner.
         alumnes = new HashMap<>();
         scanner = new Scanner(System.in);
     }
 
-public void NouAlumne(String nom, String cognom, int edat) {            //Metode que serveix per afegir un nou alumne al registre.
+    public void NouAlumne(String nom, String cognom, int edat) {              //Metode que serveix per afegir un nou alumne al registre.
         Alumne alumne = new Alumne(nom, cognom, edat);
         alumnes.put(alumne.getId(), alumne);
     }
 
-public void AfegirMateriaAlumne(int idAlumne, String materia) {       //Metodes per agregar o eliminar una materia a un alumne en especific a partir de la seva ID.
+    public void AfegirMateriaAlumne(int idAlumne, String materia) {           //Metodes per agregar o eliminar una materia a un alumne en especific a partir de la seva ID.
         Alumne alumne = alumnes.get(idAlumne);
         if (alumne != null) {
             alumne.NovaMateria(materia);
@@ -78,3 +78,5 @@ public void AfegirMateriaAlumne(int idAlumne, String materia) {       //Metodes 
             alumne.EliminarMateria(materia);
         }
     }
+
+    
