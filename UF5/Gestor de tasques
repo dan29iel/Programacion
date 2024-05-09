@@ -157,6 +157,17 @@ public class GestorDeTasques {
                     gestor.mostrarTasquesPerPrioritat(prioritat);
                     break;
                 case 6:
+                    gestor.sortir();
+                    break;
+                default:
+                    System.out.println("Opció no vàlida.");
+                    break;
+            }
+        }
+    }
+}
+                    
+                    
                     
                     
                     
