@@ -139,6 +139,19 @@ public class GestorDeTasques {
                     gestor.afegirTasca(descripcio, prioritat);
                     break;
                 case 2:
+                    System.out.print("Numero de la tasca per marcar com completada: ");
+                    int idTasca = scanner.nextInt();
+                    gestor.marcarTascaCompletada(idTasca);
+                    break;
+                case 3:
+                    System.out.print("Numero de la tasca per esborrar: ");
+                    idTasca = scanner.nextInt();
+                    gestor.esborrarTasca(idTasca);
+                    break;
+                case 4:
+                    gestor.mostrarTotesLesTasques();
+                    break;
+                
                     
                     
                     
