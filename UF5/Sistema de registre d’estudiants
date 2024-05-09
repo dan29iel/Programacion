@@ -93,3 +93,9 @@ class RegistreAlumnes {         //Declararem les variables d'instància de la cl
             System.out.println(alumne.getMateria());
         }
     }
+
+    public void sortir() {              //Per sortir del programa.
+        scanner.close();
+        System.exit(0);
+    }
+}
