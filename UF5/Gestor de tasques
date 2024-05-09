@@ -44,6 +44,26 @@ class Tasca {
     }
 }
 
+class GestorTasques {
+    private static final String MSG_1 = "baixa";
+    private static final String MSG_2 = "mitjana";
+    private static final String MSG_3 = "alta";
+    private HashMap<String, ArrayList<Tasca>> llistaPrioritat;
+    private HashMap<Integer, Tasca> tasques;
+    private Scanner scanner;
+
+    public GestorTasques() {
+        llistaPrioritat = new HashMap<>();
+        llistaPrioritat.put(MSG_1, new ArrayList<>());
+        llistaPrioritat.put(MSG_2, new ArrayList<>());
+        llistaPrioritat.put(MSG_3, new ArrayList<>());
+        tasques = new HashMap<>();
+        scanner = new Scanner(System.in);
+    }
+
+    
+
+    
 
 
 
