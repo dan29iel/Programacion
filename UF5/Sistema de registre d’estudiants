@@ -64,3 +64,17 @@ public void NouAlumne(String nom, String cognom, int edat) {            //Metode
         Alumne alumne = new Alumne(nom, cognom, edat);
         alumnes.put(alumne.getId(), alumne);
     }
+
+public void AfegirMateriaAlumne(int idAlumne, String materia) {       //Metodes per agregar o eliminar una materia a un alumne en especific a partir de la seva ID.
+        Alumne alumne = alumnes.get(idAlumne);
+        if (alumne != null) {
+            alumne.NovaMateria(materia);
+        }
+    }
+
+    public void EliminarMateriaAlumne(int idAlumne, String materia) {
+        Alumne alumne = alumnes.get(idAlumne);
+        if (alumne != null) {
+            alumne.EliminarMateria(materia);
+        }
+    }
