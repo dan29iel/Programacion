@@ -79,4 +79,17 @@ class RegistreAlumnes {         //Declararem les variables d'instància de la cl
         }
     }
 
-    
+    public void MostrarAlumnes() {                        //Metodes per mostrar la informació de cada alumne i les materies
+        System.out.println("Alumnes registrats:");
+        for (Alumne alumne : alumnes.values()) {
+            System.out.println(alumne);
+        }
+    }
+
+    public void mostrarMatèriesAlumne(int idAlumne) {
+        Alumne alumne = alumnes.get(idAlumne);
+        if (alumne != null) {
+            System.out.println("Materies de l'alumne " + alumne.getNom() + " " + alumne.getCognom() + ":");
+            System.out.println(alumne.getMateria());
+        }
+    }
