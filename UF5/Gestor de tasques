@@ -151,7 +151,13 @@ public class GestorDeTasques {
                 case 4:
                     gestor.mostrarTotesLesTasques();
                     break;
-                
+                case 5:
+                    System.out.print("Prioritat a mostrar: baixa/mitjana/alta: ");
+                    prioritat = scanner.nextLine().toLowerCase();
+                    gestor.mostrarTasquesPerPrioritat(prioritat);
+                    break;
+                case 6:
+                    
                     
                     
                     
