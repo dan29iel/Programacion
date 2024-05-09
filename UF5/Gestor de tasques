@@ -20,7 +20,7 @@ class Tasca {
 
     public void marcarTascaCompletada() {
         this.tasca_completada = true;
-    {
+    }
 
     public int getID() {
         return this.id;
@@ -61,8 +61,47 @@ class GestorTasques {
         scanner = new Scanner(System.in);
     }
 
-    
+    public void afegirTasca(String descripcio, String prioritat) {
+        Tasca tasca = new Tasca(descripcio, prioritat);
+        llistaPrioritat.get(prioritat).add(tasca);
+        tasques.put(tasca.getId(), tasca);
+    }
 
+    public void marcarTascaCompletada(int idTasca) {
+        Tasca tasca = tasques.get(idTasca);
+        if (tasca != null) {
+          tasca.marcarTascaCompletada();
+        }
+    }
+
+    public void esborrarTasca(int idTasca) {
+        Tasca tasca = tasques.remove(idTasca);
+        if (tasca != null) {
+            String prioritat = tasca.getPrioritat();
+            llistaPrioritat.get(prioritat).remove(tasca);
+        }
+    }
+
+    public void mostrarTotesLesTasques() {
+        System.out.println("Totes les tasques:");
+        for (Tasca tasca : tasques.values()) {
+            System.out.println(tasca);
+        }
+    }
+
+    public void mostrarTasquesPerPrioritat(String prioritat) {
+        System.out.println("Tasques de prioritat " + prioritat + ":");
+        for (Tasca tasca : llistaPrioritat.get(prioritat)) {
+            System.out.println(tasca);
+        }
+    }
+
+    public void sortir() {
+        scanner.close();
+        System.exit(0);
+    }
+}
+        
     
 
 
