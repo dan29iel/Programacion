@@ -86,7 +86,7 @@ class RegistreAlumnes {         //Declararem les variables d'instància de la cl
         }
     }
 
-    public void mostrarMatèriesAlumne(int idAlumne) {
+    public void mostrarMateriaAlumne(int idAlumne) {
         Alumne alumne = alumnes.get(idAlumne);
         if (alumne != null) {
             System.out.println("Materies de l'alumne " + alumne.getNom() + " " + alumne.getCognom() + ":");
@@ -159,7 +159,7 @@ public class SistemaDeRegistre {                         //Definim les constants
                 case 5:
                     System.out.print("ID: ");
                     idAlumne = scanner.nextInt();
-                    registre.mostrarMatèriesAlumne(idAlumne);
+                    registre.mostrarMateriaAlumne(idAlumne);
                     break;
                 case 6:
                     registre.sortir();
