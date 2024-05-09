@@ -2,3 +2,10 @@
 import java.util.HashMap;
 import java.util.ArrayList
 import java.util.Scanner;
+
+class Tasca {
+  private static int cont = 0;
+  private int id;
+  private String descripcio;
+  private boolean tasca_completada;
+  private String prioritat;
