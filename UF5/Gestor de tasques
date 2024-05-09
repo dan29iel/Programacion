@@ -64,7 +64,7 @@ class GestorTasques {
     public void afegirTasca(String descripcio, String prioritat) {
         Tasca tasca = new Tasca(descripcio, prioritat);
         llistaPrioritat.get(prioritat).add(tasca);
-        tasques.put(tasca.getId(), tasca);
+        tasques.put(tasca.getID(), tasca);
     }
 
     public void marcarTascaCompletada(int idTasca) {
