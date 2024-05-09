@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Alumne {
+class Alumne {                          //Declararem les variables d'instància de l'alumne.
     private static int cont = 0;
     private int id;
     private String nom;
