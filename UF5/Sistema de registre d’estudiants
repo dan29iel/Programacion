@@ -37,3 +37,12 @@ class Alumne {                          //Declararem les variables d'instància 
     public ArrayList<String> getMateria() {
         return this.materia;
     }
+
+    public void NovaMateria(String materia) {      //Metodes per gestionar les materies afegir/eliminar materia.
+        this.materia.add(materia);
+    }
+
+    public void EliminarMateria(String materia) {
+        this.materia.remove(materia);
+    }
+
