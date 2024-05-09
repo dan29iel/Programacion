@@ -102,7 +102,35 @@ class GestorTasques {
     }
 }
         
+public class GestorDeTasques {
+    private static final String MSG_1 = "\nOpcions:";
+    private static final String MSG_2 = "1. Afegeix nova tasca";
+    private static final String MSG_3 = "2. Marca una tasca com a completada";
+    private static final String MSG_4 = "3. Esborra una tasca";
+    private static final String MSG_5 = "4. Mostra totes les tasques"; 
+    private static final String MSG_6 = "5. Mostra les tasques per prioritat";
+    private static final String MSG_7 = "6. Surt del programa";
+    private static final String MSG_8 = "Selecciona una opcio: ";
+
     
+    public static void main(String[] args) {
+        GestorTasques gestor = new GestorTasques();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true)  {
+            System.out.println(MSG_1);
+            System.out.println(MSG_2);
+            System.out.println(MSG_3);
+            System.out.println(MSG_4);
+            System.out.println(MSG_5);
+            System.out.println(MSG_6);
+            System.out.println(MSG_7);
+            System.out.println(MSG_8);
+
+            int opcio = scanner.nextInt();
+            
+            
+            
 
 
 
