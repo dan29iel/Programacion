@@ -1,1 +1,12 @@
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Alumne {
+    private static int cont = 0;
+    private int id;
+    private String nom;
+    private String cognom;
+    private int edat;
+    private ArrayList<String> materia;
 
