@@ -15,3 +15,12 @@ class Tasca {
         this.descripcio = descripcio;
         this.tasca_completada = false;
         this.prioritat = prioritat;
+    }
+
+    public void marcarTascaCompletada() {
+        this.tasca_completada = true;
+    {
+
+    public int getID() {
+        return this.id;
+    }
