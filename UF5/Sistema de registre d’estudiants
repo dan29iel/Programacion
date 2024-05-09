@@ -50,3 +50,10 @@ class Alumne {                          //Declararem les variables d'instància 
         return "ID: " + id + " Nom: " + nom + " Cognom: " + cognom + " Edat: " + edat + " Materies: " + materia;
     }
 }
+
+class RegistreAlumnes {         //Declararem les variables d'instància de la classe RegistreAlumnes
+    private HashMap<Integer, Alumne> alumnes;
+    private Scanner scanner;
+
+
+
