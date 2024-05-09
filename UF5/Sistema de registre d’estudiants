@@ -10,10 +10,30 @@ class Alumne {                          //Declararem les variables d'instància 
     private int edat;
     private ArrayList<String> materia;
 
-    public Alumne(String nom, String cognom, int edat) {
+    public Alumne(String nom, String cognom, int edat) {          //Constructor de la classe i inicialitzem les varibles d'instacia i l'array per a la llista de materies.
         this.id = ++cont;
         this.nom = nom;
         this.cognom = cognom;
         this.edat = edat;
         this.materia = new ArrayList<>();
+    }
+
+    public int getId() {        //Metodes d'accés a les varibles dl'alumne.
+        return this.id;
+    }
+
+    public String getNom() {
+        return this.nom;
+    }
+
+    public String getCognom() {
+        return this.cognom;
+    }
+
+    public int getEdat() {
+        return this.edat;
+    }
+
+    public ArrayList<String> getMateria() {
+        return this.materia;
     }
