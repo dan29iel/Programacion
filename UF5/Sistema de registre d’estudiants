@@ -126,3 +126,45 @@ public class SistemaDeRegistre {                         //Definim les constants
 
             int opcio = scanner.nextInt();
             scanner.nextLine();
+
+            switch (opcio) {                         //Amb l'escaner llegirem l'opció que volem per poder executar el 6 casos diferents.
+                case 1:
+                    System.out.print("Nom: ");
+                    String nom = scanner.nextLine();
+                    System.out.print("Cognom: ");
+                    String cognom = scanner.nextLine();
+                    System.out.print("Edat: ");
+                    int edat = scanner.nextInt();
+                    registre.NouAlumne(nom, cognom, edat);
+                    break;
+                case 2:
+                    System.out.print("ID: ");
+                    int idAlumne = scanner.nextInt();
+                    scanner.nextLine(); // Netegem el buffer
+                    System.out.print("Nova materia: ");
+                    String materiaNova = scanner.nextLine();
+                    registre.AfegirMateriaAlumne(idAlumne, materiaNova);
+                    break;
+                case 3:
+                    System.out.print("ID: ");
+                    idAlumne = scanner.nextInt();
+                    scanner.nextLine(); // Netegem el buffer
+                    System.out.print("Materia per eliminar: ");
+                    String materiaEliminada = scanner.nextLine();
+                    registre.EliminarMateriaAlumne(idAlumne, materiaEliminada);
+                    break;
+                case 4:
+                    registre.MostrarAlumnes();
+                    break;
+                case 5:
+                    System.out.print("ID: ");
+                    idAlumne = scanner.nextInt();
+                    registre.mostrarMatèriesAlumne(idAlumne);
+                    break;
+                case 6:
+                    registre.sortir();
+                    break;
+            }
+        }
+    }
+}
