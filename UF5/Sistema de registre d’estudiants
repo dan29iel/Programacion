@@ -46,3 +46,7 @@ class Alumne {                          //Declararem les variables d'instància 
         this.materia.remove(materia);
     }
 
+    public String toString() {         //Retorna en cadena tota la informació del alumne.
+        return "ID: " + id + " Nom: " + nom + " Cognom: " + cognom + " Edat: " + edat + " Materies: " + materia;
+    }
+}
