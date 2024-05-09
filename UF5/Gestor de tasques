@@ -1,3 +1,4 @@
+package task.management;
 
 import java.util.HashMap;
 import java.util.ArrayList
@@ -24,3 +25,23 @@ class Tasca {
     public int getID() {
         return this.id;
     }
+
+    public getDescripcio() {
+        return this.descripcio;
+    }
+
+    public boolean estaCompletada() {
+        return this.tasca_completada;
+    }
+
+    public String getPrioritat() {
+        return this.prioritat;
+    }
+
+
+
+
+
+
+
+
