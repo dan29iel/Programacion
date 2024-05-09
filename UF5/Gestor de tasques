@@ -4,13 +4,14 @@ import java.util.ArrayList
 import java.util.Scanner;
 
 class Tasca {
-  private static int cont = 0;
-  private int id;
-  private String descripcio;
-  private boolean tasca_completada;
-  private String prioritat;
+    private static int cont = 0;
+    private int id;
+    private String descripcio;
+    private boolean tasca_completada;
+    private String prioritat;
 
-  public Tasca(String descripcio, String prioritat) {
-    this.id = ++cont;
-    this.descripcio = descripcio;
-    this.tasca_completada = false;
+    public Tasca(String descripcio, String prioritat) {
+        this.id = ++cont;
+        this.descripcio = descripcio;
+        this.tasca_completada = false;
+        this.prioritat = prioritat;
