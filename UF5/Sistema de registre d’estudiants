@@ -60,4 +60,7 @@ public RegistreAlumnes() {           //Constructor que inicialitza el HashMap  i
         scanner = new Scanner(System.in);
     }
 
-
+public void NouAlumne(String nom, String cognom, int edat) {            //Metode que serveix per afegir un nou alumne al registre.
+        Alumne alumne = new Alumne(nom, cognom, edat);
+        alumnes.put(alumne.getId(), alumne);
+    }
