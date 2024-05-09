@@ -55,5 +55,9 @@ class RegistreAlumnes {         //Declararem les variables d'instància de la cl
     private HashMap<Integer, Alumne> alumnes;
     private Scanner scanner;
 
+public RegistreAlumnes() {           //Constructor que inicialitza el HashMap  i l'escaner.
+        alumnes = new HashMap<>();
+        scanner = new Scanner(System.in);
+    }
 
 
