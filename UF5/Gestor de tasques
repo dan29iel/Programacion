@@ -128,6 +128,21 @@ public class GestorDeTasques {
             System.out.println(MSG_8);
 
             int opcio = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcio) {
+                case 1:
+                    System.out.print("Descripcio de la tasca: ");
+                    String descripcio = scanner.nextLine();
+                    System.out.print("Prioritat: baixa/mitjana/alta: ");
+                    String prioritat = scanner.nextLine().toLowerCase();
+                    gestor.afegirTasca(descripcio, prioritat);
+                    break;
+                case 2:
+                    
+                    
+                    
+                    
             
             
             
