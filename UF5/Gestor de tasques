@@ -38,6 +38,12 @@ class Tasca {
         return this.prioritat;
     }
 
+    public String toString() {
+        String estat_tasca = tasca_completada ? "Completada" : "Pendent";
+        return "ID: " + id + ", Descripcio: " + descripcio + ", Prioritat: " + prioritat + ", Estat: " + estat_tasca;
+    }
+}
+
 
 
 
