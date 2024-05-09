@@ -9,3 +9,8 @@ class Tasca {
   private String descripcio;
   private boolean tasca_completada;
   private String prioritat;
+
+  public Tasca(String descripcio, String prioritat) {
+    this.id = ++cont;
+    this.descripcio = descripcio;
+    this.tasca_completada = false;
