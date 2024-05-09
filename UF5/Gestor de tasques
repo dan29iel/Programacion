@@ -26,7 +26,7 @@ class Tasca {
         return this.id;
     }
 
-    public getDescripcio() {
+    public String getDescripcio() {
         return this.descripcio;
     }
 
