@@ -29,3 +29,52 @@ class Personatge {               //Definim les 5 variables d'instancia del perso
         this.arma = arma;
         this.armadura = armadura;
     }
+
+    public String getNom() {                  //Metodes d'accés (getters i setters) per les varibles del personatges.
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNivell() {
+        return nivell;
+    }
+
+    public void setNivell(int nivell) {
+        this.nivell = nivell;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+    
+    public String getArma() {
+        return arma;
+    }
+    
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
+    
+    public String getArmadura() {
+        return armadura;
+    }
+    
+    public void setArmadura(String armadura) {
+        this.armadura = armadura;
+    }
+}
