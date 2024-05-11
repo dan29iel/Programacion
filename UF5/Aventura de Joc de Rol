@@ -78,3 +78,13 @@ class Personatge {               //Definim les 5 variables d'instancia del perso
         this.armadura = armadura;
     }
 }
+
+class GestioPersonatges {                     //Declarem la llista de les caracteristiques del personatge.
+    private List<Personatge> personatges;
+    private Scanner scanner;
+
+    public GestioPersonatges() {                     //Declarem el constructor de la classe GestioPersonatges per inicialitzar la llista i truca al metode carregarPersonatges amb la ruta del arxiu xml.
+        this.personatges = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
+        carregarPersonatges("C:\\Users\\danie\\personatges.xml");
+    }
