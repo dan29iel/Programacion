@@ -140,5 +140,59 @@ class GestioPersonatges {                     //Declarem la llista de les caract
         }
     }
 
-    
+    public void modificarPersonatge() {                       //Metode per poder modificar les caracteristiques dels personatges.
+    System.out.print("Nom del personatge per modificar-lo: ");
+    String nom = scanner.nextLine();
+    for (Personatge personatge : personatges) { 
+        if (personatge.getNom().equalsIgnoreCase(nom)) {         //Preguntem al usuari el nom del personatge per poder filtrar-lo i llavors modificarlo, si el trobar pasara a la següent opció i sino sortira un avís de personatge no trobat.
+            System.out.println("Personatge trobat");
+            System.out.print("Vols nou nivell? (Introdueix SI o NO): ");      //Preguntarem al usuari si vols cambiar el nivell, si introdueix per terminal SI tindrá la opció de intoduir el nou nivell, si introdueix NO preguntara la següent pregunta.
+            String NouNivellsi = scanner.nextLine();
+            if (NouNivellsi.equalsIgnoreCase("SI")) {
+                System.out.print("Introdueix el nou nivell: ");
+                int nouNivell = scanner.nextInt();
+                scanner.nextLine();
+                personatge.setNivell(nouNivell);
+            }
+
+            System.out.print("Vols nous punts de vida? (Introdueix SI o NO): ");   //Preguntarem al usuari si vols cambiar la vida, si introdueix per terminal SI tindrá la opció de intoduir la nova vida, si introdueix NO preguntara la següent pregunta.
+            String novaVidaSi = scanner.nextLine();
+            if (novaVidaSi.equalsIgnoreCase("SI")) {
+                System.out.print("Introdueix els nous punts de vida: ");
+                int novaVida = scanner.nextInt();
+                scanner.nextLine();
+                personatge.setVida(novaVida);
+            }
+
+            System.out.print("Vols nous punts de mana? (Introdueix SI o NO): ");    //Preguntarem al usuari si vols cambiar el mana, si introdueix per terminal SI tindrá la opció de intoduir el nou mana, si introdueix NO preguntara la següent pregunta.
+            String nouManaSi = scanner.nextLine();
+            if (nouManaSi.equalsIgnoreCase("SI")) {
+                System.out.print("Introdueix els nous punts de mana: ");
+                int nouMana = scanner.nextInt();
+                scanner.nextLine();
+                personatge.setMana(nouMana);
+            }
+
+            System.out.print("Vols nova arma? (Introdueix SI o NO): ");         //Preguntarem al usuari si vols cambiar l'arma, si introdueix per terminal SI tindrá la opció de intoduir una nova arma, si introdueix NO preguntara la següent pregunta.
+            String novaArmaSI = scanner.nextLine();
+            if (novaArmaSI.equalsIgnoreCase("SI")) {
+                System.out.print("Introdueix la nova arma: ");
+                String arma = scanner.nextLine();
+                personatge.setArma(arma);
+            }
+
+            System.out.print("Vols nova armadura? (Introdueix SI o NO): ");      //Preguntarem al usuari si vols cambiar l'armadura, si introdueix per terminal SI tindrá la opció de intoduir una nova armadura, si introdueix NO preguntara la següent pregunta.
+            String novaArmaduraSi = scanner.nextLine();
+            if (novaArmaduraSi.equalsIgnoreCase("SI")) {
+                System.out.print("Introdueix la nova armadura: ");
+                String armadura = scanner.nextLine();
+                personatge.setArmadura(armadura);
+            }
+
+            System.out.println("Personatge modificat.");      //Avís per quan el personatge es modifiqui correctament.
+            return;
+        }
+    }
+    System.out.println("Aquest personatge no esta en el joc.");      //Avís per quan introduïm el nom d'un personatge que no existeix.
+}
     
