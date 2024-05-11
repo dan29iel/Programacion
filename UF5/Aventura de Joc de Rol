@@ -88,3 +88,29 @@ class GestioPersonatges {                     //Declarem la llista de les caract
         this.scanner = new Scanner(System.in);
         carregarPersonatges("C:\\Users\\danie\\personatges.xml");
     }
+
+    public void carregarPersonatges(String archivoXML) {          //Metode per carregar el personatges desde l'arxiu XML.
+        try {
+            File arxiuXML = new File("C:\\Users\\danie\\personatges.xml");             //Crearem l'objecte File utilitzant la ruta.
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();     //Instanciem l'objecte DocumentBuilderFactory i despres creem el DocumentBuilder.
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(arxiuXML);
+            NodeList llistaPersonatges = doc.getElementsByTagName("personatge");       //Obtenim la llista de personatges, es a dir, els nodes del document XML.
+
+            for (int i = 0; i < llistaPersonatges.getLength(); i++) {                  //Fem la iteració de la llista de personatges
+                Node n = llistaPersonatges.item(i);
+                if (n.getNodeType() == Node.ELEMENT_NODE) {                            //Verifiquem si el node és ELEMENT_NODE
+                    Element registre = (Element) n;
+                    String nom = registre.getElementsByTagName("nom").item(0).getTextContent();       //Extreurem els valors de les 5 acaracteristiques dels personatges amb els mateix noms que hi ha en el document XML.
+                    int nivell = Integer.parseInt(registre.getElementsByTagName("nivell").item(0).getTextContent());
+                    int vida = Integer.parseInt(registre.getElementsByTagName("puntsDeVida").item(0).getTextContent());
+                    int mana = Integer.parseInt(registre.getElementsByTagName("puntsDeMana").item(0).getTextContent());
+                    String arma = registre.getElementsByTagName("arma").item(0).getTextContent();
+                    String armadura = registre.getElementsByTagName("armadura").item(0).getTextContent();
+                    personatges.add(new Personatge(nom, nivell, vida, mana, arma, armadura));         //Afegim els valors a la llista personatges. 
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
