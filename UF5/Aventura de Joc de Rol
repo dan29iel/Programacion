@@ -201,3 +201,47 @@ public void sortir() {       //Tanquem l'escaner o sortim del programa.
         System.exit(0);
     }
 }
+
+public class JocAventura {                                                 //Aquest sera el metode Main del programa.
+    private static final String MSG_1 = "********JOC DE ROL********";
+    private static final String MSG_2 = "1. Insereix personatge nou";      //Declarem els missatges del menu del joc de rol.
+    private static final String MSG_3 = "2. Mostrar personatges";
+    private static final String MSG_4 = "3. Modificar personatge";
+    private static final String MSG_5 = "4. Sortir del joc";
+    private static final String MSG_6 = "********TERRA D'OR*********";
+    private static final String MSG_7 = "Selecciona una opcio: ";
+    public static void main(String[] args) {
+        GestioPersonatges menu = new GestioPersonatges();          //Crearem la instacia menu per poder carregar els personatges del arxiu XML. 
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println(MSG_1);                //Printem tots els missatges.
+            System.out.println(MSG_2);
+            System.out.println(MSG_3);
+            System.out.println(MSG_4);
+            System.out.println(MSG_5);
+            System.out.println(MSG_6);
+            System.out.print(MSG_7);
+            int opcions = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcions) {                        //Aquest switch donara l'opció de poder escollir les opcions en el menu que volguem, cridant als 4 metodes possibles.
+                case 1:
+                    menu.inserirPersonatge();
+                    break;
+                case 2:
+                    menu.mostrarPersonatges();
+                    break;
+                case 3:
+                    menu.modificarPersonatge();
+                    break;
+                case 4:
+                    System.out.println("*******JOC FINALITZAT******");
+                    menu.sortir();
+                    break;
+                default:
+                    System.out.println("Opcio de valida");
+            }
+        }
+    }
+}
