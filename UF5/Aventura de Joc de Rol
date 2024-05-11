@@ -2,4 +2,30 @@ Per fer aquesta activitat he seguit el model de les activitats Gestor de Tasques
 Aquest programa mostrara un menú de 4 opcions, al executarlo primerament carregara els dos primers personatges del joc, després tindras les opcions disponibles per tal d'afegir personatges nou, poder modificar alguna caracter-
 ristica d'algun d'ells y poder llistar tots el personatges disponibles en el joc amb les seves caracteristiques i finalment tindràs la opció de sortir de joc.
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
+class Personatge {               //Definim les 5 variables d'instancia del personatge.
+    private String nom;
+    private int nivell;
+    private int vida;
+    private int mana;
+    private String arma;
+    private String armadura;
+
+    public Personatge(String nom, int nivell, int vida, int mana, String arma, String armadura) {           //Constructor de la classe i inicialitzem les varibles d'instancia.
+        this.nom = nom;
+        this.nivell = nivell;
+        this.vida = vida;
+        this.mana = mana;
+        this.arma = arma;
+        this.armadura = armadura;
+    }
