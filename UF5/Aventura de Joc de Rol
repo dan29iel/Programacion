@@ -1,1 +1,5 @@
+Per fer aquesta activitat he seguit el model de les activitats Gestor de Tasques y Sistema de Registre d'estudiants y he implementat el codi per la carrega del arxiu xml per tal de que es registrin el dos primers personatges.
+Aquest programa mostrara un menú de 4 opcions, al executarlo primerament carregara els dos primers personatges del joc, després tindras les opcions disponibles per tal d'afegir personatges nou, poder modificar alguna caracter-
+ristica d'algun d'ells y poder llistar tots el personatges disponibles en el joc amb les seves caracteristiques i finalment tindràs la opció de sortir de joc.
+
 
