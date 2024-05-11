@@ -195,4 +195,9 @@ class GestioPersonatges {                     //Declarem la llista de les caract
     }
     System.out.println("Aquest personatge no esta en el joc.");      //Avís per quan introduïm el nom d'un personatge que no existeix.
 }
-    
+
+public void sortir() {       //Tanquem l'escaner o sortim del programa.
+        scanner.close();
+        System.exit(0);
+    }
+}
