@@ -114,3 +114,21 @@ class GestioPersonatges {                     //Declarem la llista de les caract
             e.printStackTrace();
         }
     }
+
+    public void inserirPersonatge() {                 //Creem el metode per poder inserir el personatges manualment amb les seves 5 caracteristiques.
+        System.out.print("Nom del personatge: ");
+        String nom = scanner.nextLine();
+        System.out.print("Nivell del personatge: ");
+        int nivell = scanner.nextInt();
+        System.out.print("Vida del personatge: ");
+        int vida = scanner.nextInt();
+        System.out.print("Mana del personatge: ");
+        int mana = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Arma del personatge: ");
+        String arma = scanner.nextLine();
+        System.out.print("Armadura del personatge: ");
+        String armadura = scanner.nextLine();
+        personatges.add(new Personatge(nom, nivell, vida, mana, arma, armadura));     //Creem el nou personatges amb les caracteristiques escollides.
+        System.out.println("Personatge registrat");
+    }
