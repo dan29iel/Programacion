@@ -132,3 +132,12 @@ class GestioPersonatges {                     //Declarem la llista de les caract
         personatges.add(new Personatge(nom, nivell, vida, mana, arma, armadura));     //Creem el nou personatges amb les caracteristiques escollides.
         System.out.println("Personatge registrat");
     }
+
+    public void mostrarPersonatges() {                  //Mostrem per consola els personatges disponibles amb les seves 5 caracteristiques.
+        System.out.println("Personatges disponibles:");
+        for (Personatge personatge : personatges) {
+            System.out.println("Nom: " + personatge.getNom() + ", Nivell: " + personatge.getNivell() + ", Vida: " + personatge.getVida() + ", Mana: " + personatge.getMana() + ", Arma: " + personatge.getArma() + ", Armadura: " + personatge.getArmadura());
+        }
+    }
+
+    
