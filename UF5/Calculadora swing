@@ -1,1 +1,3 @@
-
+Per tal de poder posar tots el botons per poder fer la calculadora, jo en aquest cas utitilizaria els layouts (en el API DE jva teneim tres que són: FlowLayout, GridLayout i el BorderLayout), 
+es a dir quan vas el JPanel panell = new JPanel, que es el contenidor, i obriries parentesis i faries un new FlowLayout/GridLayout/BorderLayout, per tal de col·locar els botons de manera ordenada,
+per a la calculadora el millor seria el GridLayout.
