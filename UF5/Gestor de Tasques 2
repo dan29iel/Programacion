@@ -97,3 +97,16 @@ class GestorTasques {
             e.printStackTrace();
         }
     }
+
+    public void afegirTascaArxiu() {               //Declarem el metode afegirTascaArxiu.
+        System.out.print("Insereix el Titol: ");
+        String titol = scanner.nextLine();
+        System.out.print("Insereix la Descripcio: ");
+        String descripcio = scanner.nextLine();
+        System.out.print("Insereix Data de venciment (Exemple: 2024-05-17): ");
+        LocalDate dataVenciment = LocalDate.parse(scanner.nextLine());
+        System.out.print("Insereix l'Estat (pendent, en curs, completada): ");
+        String estat = scanner.nextLine();
+        tasques.add(new Tasca(titol, descripcio, dataVenciment, estat));       //Creem la nova tasca amb les caracteristiques escollides.
+        System.out.println("Tasca afegida");
+    }
