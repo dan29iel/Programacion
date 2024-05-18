@@ -5,3 +5,59 @@ mostar y sortir y guardar.)
 Problemes al realitzar la tasca: Només he tingut el problema que no m'agafa quan li vull posar el .txt en el programa, new FileReader(nomFitxer + ".txt") no m'agafa bé aixó i aixó provoca que sempre s'ha de posar el nom del 
 arxiu més el .txt.
 
+import java.io.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Tasca {
+    private String titol;                           //Definim les 4 variables d'instancia de la tasca.
+    private String descripcio;
+    private LocalDate dataVenciment;
+    private String estat;
+
+    public Tasca(String titol, String descripcio, LocalDate dataVenciment, String estat) {            //Constructor de la classe i inicialitzem les varibles d'instancia.
+        this.titol = titol;
+        this.descripcio = descripcio;
+        this.dataVenciment = dataVenciment;
+        this.estat = estat;
+    }
+
+    public String getTitol() {                          //Metodes d'accés (getters i setters) per les varibles del personatges.
+        return titol;
+    }
+
+    public void setTitol(String titol) {
+        this.titol = titol;
+    }
+
+    public String getDescripcio() {
+        return descripcio;
+    }
+
+    public void setDescripcio(String descripcio) {
+        this.descripcio = descripcio;
+    }
+
+    public LocalDate getDataVenciment() {
+        return dataVenciment;
+    }
+
+    public void setDataVenciment(LocalDate dataVenciment) {
+        this.dataVenciment = dataVenciment;
+    }
+
+    public String getEstat() {
+        return estat;
+    }
+
+    public void setEstat(String estat) {
+        this.estat = estat;
+    }
+
+    @Override
+    public String toString() {                         //Convertim en una cadena de text i les caracteristiques les posem separades per comes.
+        return titol + "," + descripcio + "," + dataVenciment + "," + estat;
+    }
+}
