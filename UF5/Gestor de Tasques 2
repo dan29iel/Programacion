@@ -164,3 +164,10 @@ class GestorTasques {
             System.out.println("Titol: " + tasca.getTitol() + ", Descripcio: " + tasca.getDescripcio() + ", Data de venciment: " + tasca.getDataVenciment() + ", Estat: " + tasca.getEstat());
         }
     }
+
+    public void sortir() {   //Declarem el metode sortir per poder sortir del programa
+        scanner.close();
+        System.exit(0);
+    }
+}
+
