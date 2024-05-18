@@ -70,3 +70,20 @@ class GestorTasques {
         this.tasques = new ArrayList<>();
         this.scanner = new Scanner(System.in);
     }
+
+    public void carregarArxiuTasques(String nomFitxer) {             //Declarem el metode carregarArxiuTasques i el nom del arxiu per carregar les taques.
+        try (BufferedReader br = new BufferedReader(new FileReader(nomFitxer))) {       //Iniciem el BufferedReader per llegir els caracters del arxiu i decalrem la variable registre per emmagatzemar les linees de text.
+            String registre;                               
+            while ((registre = br.readLine()) != null) {
+                String[] posicio = registre.split(",");             //Asignem cada registre a cada variable utilitzant la coma com a delimitador i les afegim a les variables
+                String titol = posicio[0];
+                String descripcio = posicio[1];
+                LocalDate dataVenciment = LocalDate.parse(posicio[2]);
+                String estat = posicio[3];
+                tasques.add(new Tasca(titol, descripcio, dataVenciment, estat));            //Afegim els nous registres a la classe Tasca
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
