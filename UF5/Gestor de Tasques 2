@@ -110,3 +110,37 @@ class GestorTasques {
         tasques.add(new Tasca(titol, descripcio, dataVenciment, estat));       //Creem la nova tasca amb les caracteristiques escollides.
         System.out.println("Tasca afegida");
     }
+
+    public void modificarTascaArxiu() {          //Declarem el metode modificarTascaArxiu.
+        System.out.print("Insereix el titol de la tasca a modificar: ");
+        String titol = scanner.nextLine();
+        for (Tasca tasca : tasques) {
+            if (tasca.getTitol().equalsIgnoreCase(titol)) {  //Preguntem al usuari el nom de la tasca per poder filtrar-la i llavors modificarla, si la troba pasara a la següent opció i sino sortira un avís de tasca no trobada.
+                System.out.println("Tasca Trobada");
+                System.out.print("Vols cambiar la descripcio? (Introdueix SI o NO): ");    //Preguntarem al usuari si vols cambiar la descripcio, si introdueix per terminal SI tindrá la opció de intoduir la nova descipcio, si introdueix NO preguntara la següent pregunta.
+                String novaDescripcioSi = scanner.nextLine();
+                if (novaDescripcioSi.equalsIgnoreCase("SI")) {
+                    System.out.print("Introdueix la nova descripcio: ");
+                    String novaDescripcio = scanner.nextLine();
+                    tasca.setDescripcio(novaDescripcio);
+                }
+                System.out.print("Vols cambiarla data de venciment? (Introdueix SI o NO): ");   //Preguntarem al usuari si vols cambiar la data de venciment, si introdueix per terminal SI tindrá la opció de intoduir la nova data de venciment, si introdueix NO preguntara la següent pregunta.
+                String novaDataVencimentSi = scanner.nextLine();
+                if (novaDataVencimentSi.equalsIgnoreCase("SI")) {
+                    System.out.print("Introdueix la nova data (Exemple: 2024-05-17): ");
+                    LocalDate novaDataVenciment = LocalDate.parse(scanner.nextLine());
+                    tasca.setDataVenciment(novaDataVenciment);
+                }
+                System.out.print("Vols cambiar l'estat? (Introdueix SI o NO): ");   //Preguntarem al usuari si vols cambiar l'estat, si introdueix per terminal SI tindrá la opció de intoduir el nou estat, si introdueix NO preguntara la següent pregunta.
+                String nouEstatSi = scanner.nextLine();
+                if (nouEstatSi.equalsIgnoreCase("SI")) {
+                    System.out.print("Introdueix el nou estat (pendent, en curs, completada): ");
+                    String nouEstat = scanner.nextLine();
+                    tasca.setEstat(nouEstat);
+                }
+                System.out.println("Tasca modificada");    //Avís per quan la tasca es modifiqui correctament.
+                return;
+            }
+        }
+        System.out.println("Aquesta tasca no esta en el gestor");         //Avís per quan introduïm el nom d'una tasca que no existeix.
+    }
