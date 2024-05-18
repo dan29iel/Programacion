@@ -1,9 +1,5 @@
-Per fer aquesta activitat he continuat seguint el model de les altres, en aquest cas tenom un programa on primerament carregara o creara de nou un arxiu TXT. És important posar sempre el .txt tant quant es crea de nou
-com quan vols obrir un arxiu ja creat amb anterioritat, és a dir, quan pregunta "Introdueix el nom del fitxer de tasques:" sempre s'haura de posar Exemple.txt. Consta d'un menu amb 5 opcions (afegir, modificar, eliminar,
-mostar y sortir y guardar.)
-
-Problemes al realitzar la tasca: Només he tingut el problema que no m'agafa quan li vull posar el .txt en el programa, new FileReader(nomFitxer + ".txt") no m'agafa bé aixó i aixó provoca que sempre s'ha de posar el nom del 
-arxiu més el .txt.
+Per fer aquesta activitat he continuat seguint el model de les altres, en aquest cas tenom un programa on primerament carregara o creara de nou un arxiu TXT. Consta d'un menu amb 5 opcions (afegir, modificar, eliminar,
+mostar y sortir y guardar.) No fara falta posar el .txt, ja que el programa ho posara sol.
 
 import java.io.*;
 import java.time.LocalDate;
@@ -171,3 +167,26 @@ class GestorTasques {
     }
 }
 
+public class GestorDeTasques {                                                   //Aquest sera el metode Main del programa.
+    private static final String MSG_1 = "********GESTOR DE TASQUES********";     //Declarem els missatges del menu del gestor.
+    private static final String MSG_2 = "1. Afegir una nova tasca";
+    private static final String MSG_3 = "2. Modificar una tasca";
+    private static final String MSG_4 = "3. Eliminar una tasca";
+    private static final String MSG_5 = "4. Mostar la llista de tasques";
+    private static final String MSG_6 = "5. Sortir i Guardar";
+    private static final String MSG_7 = "*******************************";
+    private static final String MSG_8 = "Selecciona una opcio: ";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(MSG_1);
+        System.out.println("INFO: Si el fitxer no existeix es creara automaticament al introduir el nom, si ja existeix al introduir el nom detectara l'arxiu.");
+        System.out.print("Introdueix el nom del fitxer de tasques: ");       //Introduim nom de l'arxiu
+        String nomFitxer = scanner.nextLine() + ".txt";          //Afegim l'extensió .txt per l'arxiu.
+
+        GestorTasques gestor = new GestorTasques();
+        File fitxer = new File(nomFitxer);                //Si l'arxiu existeix carreguem l'arxiu amb les tasques.
+        if (fitxer.exists()) {
+            gestor.carregarArxiuTasques(nomFitxer);
+            System.out.println("Arxiu carregat");
+        }
