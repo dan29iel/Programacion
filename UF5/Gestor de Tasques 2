@@ -157,3 +157,10 @@ class GestorTasques {
         }
         System.out.println("No s'ha trobat cap tasca amb aquest titol.");         //Avís per quan introduïm el nom d'una tasca que no existeix.
     }
+
+    public void mostrarTasques() {          //Declarem el metode mostrarTasques i Mostrem per consola les tasques disponibles amb les seves 4 caracteristiques
+        System.out.println("Tasques disponibles:");
+        for (Tasca tasca : tasques) {
+            System.out.println("Titol: " + tasca.getTitol() + ", Descripcio: " + tasca.getDescripcio() + ", Data de venciment: " + tasca.getDataVenciment() + ", Estat: " + tasca.getEstat());
+        }
+    }
