@@ -144,3 +144,16 @@ class GestorTasques {
         }
         System.out.println("Aquesta tasca no esta en el gestor");         //Avís per quan introduïm el nom d'una tasca que no existeix.
     }
+
+    public void eliminarTascaArxiu() {          //Declarem el metode eliminarTascaArxiu.
+        System.out.print("Introdueix la tasca a eliminar: ");       //Introduïm el titol de la tasca que volem eliminar
+        String titol = scanner.nextLine();
+        for (int i = 0; i < tasques.size(); i++) {
+            if (tasques.get(i).getTitol().equalsIgnoreCase(titol)) {         //Busquem el nom del titol en la llista i si el troba elimina tots els registres de la tasca.
+                tasques.remove(i);
+                System.out.println("Tasca eliminada");           //Avís per quan la tasca s'ha eliminat.
+                return;
+            }
+        }
+        System.out.println("No s'ha trobat cap tasca amb aquest titol.");         //Avís per quan introduïm el nom d'una tasca que no existeix.
+    }
