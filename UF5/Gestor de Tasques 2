@@ -86,4 +86,14 @@ class GestorTasques {
             e.printStackTrace();
         }
     }
-
+ 
+    public void guardarArxiuTasques(String nomFitxer) {     //Declarem el metode guardarArxiuTasques i el nom del arxiu per guardar les taques.
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomFitxer))) {       /Iniciem el BufferedWriter per escriure els caracters al arxiu.
+            for (Tasca tasca : tasques) {          //Escrivim a partir del toString les lines de text separats per comes i el bw.newLine fa que es salti de linea per cada tasca.
+                bw.write(tasca.toString());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
