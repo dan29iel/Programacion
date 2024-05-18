@@ -1,1 +1,7 @@
+Per fer aquesta activitat he continuat seguint el model de les altres, en aquest cas tenom un programa on primerament carregara o creara de nou un arxiu TXT. És important posar sempre el .txt tant quant es crea de nou
+com quan vols obrir un arxiu ja creat amb anterioritat, és a dir, quan pregunta "Introdueix el nom del fitxer de tasques:" sempre s'haura de posar Exemple.txt. Consta d'un menu amb 5 opcions (afegir, modificar, eliminar,
+mostar y sortir y guardar.)
+
+Problemes al realitzar la tasca: Només he tingut el problema que no m'agafa quan li vull posar el .txt en el programa, new FileReader(nomFitxer + ".txt") no m'agafa bé aixó i aixó provoca que sempre s'ha de posar el nom del 
+arxiu més el .txt.
 
