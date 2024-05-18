@@ -61,3 +61,12 @@ class Tasca {
         return titol + "," + descripcio + "," + dataVenciment + "," + estat;
     }
 }
+
+class GestorTasques {
+    private List<Tasca> tasques;   //Declarem la llista de les caracteristiques de la tasca.
+    private Scanner scanner;
+
+    public GestorTasques() {        //Declarem el constructor de la classe GestorTasques per inicialitzar la llista.
+        this.tasques = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
+    }
