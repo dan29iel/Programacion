@@ -190,3 +190,39 @@ public class GestorDeTasques {                                                  
             gestor.carregarArxiuTasques(nomFitxer);
             System.out.println("Arxiu carregat");
         }
+
+        while (true) {                      //Printem tots els missatges.
+            System.out.println(MSG_1);
+            System.out.println(MSG_2);
+            System.out.println(MSG_3);
+            System.out.println(MSG_4);
+            System.out.println(MSG_5);
+            System.out.println(MSG_6);
+            System.out.print(MSG_8);
+            int opcio = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcio) {                       //Aquest switch donara l'opció de poder escollir les opcions en el menu que volguem, cridant als 5 metodes possibles.
+                case 1:
+                    gestor.afegirTascaArxiu();
+                    break;
+                case 2:
+                    gestor.modificarTascaArxiu();
+                    break;
+                case 3:
+                    gestor.eliminarTascaArxiu();
+                    break;
+                case 4:
+                    gestor.mostrarTasques();
+                    break;
+                case 5:
+                    gestor.guardarArxiuTasques(nomFitxer);
+                    System.out.println("*****GESTOR FINALITZAT****");
+                    gestor.sortir();
+                    break;
+                default:
+                    System.out.println("Opcio no valida");
+            }
+        }
+    }
+}
