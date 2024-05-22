@@ -20,3 +20,15 @@ public class AppJavaFX extends Application {
         finestraPrincipal.setScene(finestra);
         finestraPrincipal.show();
     }
+
+    private void missatge() {                              //Finestra que apareixara quan li donem al boto, sortira u
+        Alert missatge = new Alert(AlertType.WARNING);
+        missatge.setTitle("AppJavaFX");
+        missatge.setContentText("Hola");
+        missatge.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
