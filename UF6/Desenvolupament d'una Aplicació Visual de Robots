@@ -142,3 +142,12 @@ public class ControlDeRobot extends Application {         //Definim la classe pu
         }
         Estat();                                             //Actualitza l'estat del robot
     }
+
+    private void Estat() {              //Metode per actualitzar l'estat del robot
+        estat.setText(getEstat());
+    }
+
+    private String getEstat() {         //Metode per printar les dades a la aplicació
+        return "**********  MENU  ***********\n Estat del robot: (" + x + "," + y + ") Direcció: " + direccioInicial_Final;
+    }
+
