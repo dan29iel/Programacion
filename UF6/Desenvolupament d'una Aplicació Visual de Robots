@@ -52,3 +52,49 @@ public void start(Stage finestraPrincipal) {
         finestraPrincipal.setScene(escena);
         finestraPrincipal.show();
     }
+
+private void moureRobot_endavant() {                  //S'activara al apretar el boto moure endavant
+        if (this.direccioInicial_Final.isEmpty()) {      //Si la direcció esta buida asignara Nord per predeterminat
+            this.direccioInicial_Final = "Nord";
+        }
+        switch (this.direccioInicial_Final) {     //Utilitzarem el switch per tal de incrementar o decrementar les coordenades.
+            case "Nord":
+                y++;
+                break;
+            case "Sud":
+                y--;
+                break;
+            case "Est":
+                x++;
+                break;
+            case "Oest":
+                x--;
+                break;
+            default:
+                break;
+        }
+        Estat();                             //Cada vegada que fara el switch cridara al Estat per printar la direcció i les coordenades.
+    }
+    
+    private void moureRobot_enrere() {                     //S'activara al apretar el boto moure enrere
+        if (this.direccioInicial_Final.isEmpty()) {        //Si la direcció esta buida asignara Nord per predeterminat
+            this.direccioInicial_Final = "Nord";
+        }
+        switch (this.direccioInicial_Final) {              //Utilitzarem el switch per tal de incrementar o decrementar les coordenades.
+            case "Nord":
+                y--;
+                break;
+            case "Sud":
+                y++;
+                break;
+            case "Est":
+                x--;
+                break;
+            case "Oest":
+                x++;
+                break;
+            default:
+                break;
+        }
+        Estat();                                          //Cada vegada que fara el switch cridara al Estat per printar la direcció i les coordenades.
+    }  
