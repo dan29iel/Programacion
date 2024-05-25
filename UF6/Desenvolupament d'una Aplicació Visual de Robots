@@ -17,3 +17,38 @@ public class ControlDeRobot extends Application {         //Definim la classe pu
     private int y = 0;
     private String direccioInicial_Final = "";            //Declarem la variable per la direcció i la declarem buida per tal de després afegir la direcció.
     private Label estat;                                  //La variable estat s'utilitzara per printar en l'aplicació la posició i la direcció.
+
+public void start(Stage finestraPrincipal) {
+        Button boto_Endavant = new Button("Moure Endavant");               //Creeem els botons per controlar el robot.
+        Button boto_Enrere = new Button("Moure Enrere");
+        Button boto_Esquerra = new Button("Girar Esquerra");
+        Button boto_Dreta = new Button("Girar Dreta");
+        Button boto_guardarEstat = new Button("Guardar Estat");
+        Button boto_carregarEstat = new Button("Carregar Estat");
+
+        estat = new Label(getEstat());                                   //Creem l'etiqueta per després mostrar l'estat del robot.
+
+        boto_Endavant.setOnAction(e -> moureRobot_endavant());           //Assignem les accions als botons que hem creat abans, les accions cridaran als metodes.
+        boto_Enrere.setOnAction(e -> moureRobot_enrere());
+        boto_Esquerra.setOnAction(e -> girarRobot("esquerra"));
+        boto_Dreta.setOnAction(e -> girarRobot("dreta"));
+        boto_guardarEstat.setOnAction(e -> guardarEstat());
+        boto_carregarEstat.setOnAction(e -> carregarEstat());
+
+        VBox layout = new VBox(10);                                     //Creem amb el VBox una caixa vertical i li dorarem espai entre ellsi el padding.
+        layout.setPadding(new Insets(20));
+        layout.setAlignment(Pos.CENTER);
+
+        HBox botons_robot_moviment = new HBox(20, boto_Endavant, boto_Enrere, boto_Esquerra, boto_Dreta);     //Creem amb el HBox dues caixes horitzontals amb els botons del layout.
+        botons_robot_moviment.setAlignment(Pos.CENTER);
+
+        HBox botons_robot_estat = new HBox(20, boto_guardarEstat, boto_carregarEstat);                        //Creem amb el HBox dues caixes horitzontals amb els botons del layout.
+        botons_robot_estat.setAlignment(Pos.CENTER);
+
+        layout.getChildren().addAll(estat, botons_robot_moviment, botons_robot_estat);                        //Afegim l'etiqueta d'estat i les HBox amb els botons del layout.
+
+        Scene escena = new Scene(layout, 800, 400);                     //Creem l'escena i fiquem les dimensions i posem el titol de la finestra.
+        finestraPrincipal.setTitle("Control del Robot");
+        finestraPrincipal.setScene(escena);
+        finestraPrincipal.show();
+    }
