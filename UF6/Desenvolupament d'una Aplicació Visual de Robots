@@ -151,3 +151,28 @@ public class ControlDeRobot extends Application {         //Definim la classe pu
         return "**********  MENU  ***********\n Estat del robot: (" + x + "," + y + ") Direcció: " + direccioInicial_Final;
     }
 
+    private void guardarEstat() {         //Metode per guardar l'estat del robot.
+        try (PrintWriter out = new PrintWriter(new FileWriter("coordenades_robot.txt"))) {    //Guardarem l'estat del robot al arxiu coordenades_robot.txt
+            out.println(x + "," + y + "," + direccioInicial_Final);                           //Guardarem les coordenades separades per comes a l'arxiu.
+            Alert alerta = new Alert(AlertType.INFORMATION);                                  //Rebrem una alerta quan s'hagi guardat.
+            alerta.setContentText("Estat del robot guardat");
+            alerta.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void carregarEstat() {         //Metode per carregar l'estat del robot.
+        try (BufferedReader in = new BufferedReader(new FileReader("coordenades_robot.txt"))) {     //Carregarem l'estat de l'arxiu coordenades_robot.txt
+            String[] estat = in.readLine().split(",");            //Dividirem la linea per comes per obtenir les dades.
+            x = Integer.parseInt(estat[0]);
+            y = Integer.parseInt(estat[1]);
+            direccioInicial_Final = estat[2];                 
+            Estat();                                              //Actualitzarem l'estat amb les dades lleguides.
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setContentText("Estat del robot carregat");    //Rebrem una alerta quan shago carregat.
+            alerta.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
