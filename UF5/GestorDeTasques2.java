@@ -167,7 +167,7 @@ class GestorTasques {
     }
 }
 
-public class GestorDeTasques {                                                   //Aquest sera el metode Main del programa.
+public class GestorDeTasques2 {                                                   //Aquest sera el metode Main del programa.
     private static final String MSG_1 = "********GESTOR DE TASQUES********";     //Declarem els missatges del menu del gestor.
     private static final String MSG_2 = "1. Afegir una nova tasca";
     private static final String MSG_3 = "2. Modificar una tasca";
