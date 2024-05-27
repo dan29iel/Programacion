@@ -1,5 +1,5 @@
-Per fer aquesta activitat he continuat seguint el model de les altres, en aquest cas tenom un programa on primerament carregara o creara de nou un arxiu TXT. Consta d'un menu amb 5 opcions (afegir, modificar, eliminar,
-mostar y sortir y guardar.) No fara falta posar el .txt, ja que el programa ho posara sol.
+//Per fer aquesta activitat he continuat seguint el model de les altres, en aquest cas tenom un programa on primerament carregara o creara de nou un arxiu TXT. Consta d'un menu amb 5 opcions (afegir, modificar, eliminar,
+//mostar y sortir y guardar.) No fara falta posar el .txt, ja que el programa ho posara sol.
 
 import java.io.*;
 import java.time.LocalDate;
